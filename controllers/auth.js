@@ -46,6 +46,6 @@ export const login = async (req, res, next) => {
             .json({ ...otherDetails });
 
     } catch (err) {
-        next(err)
+        next(err);
     }
 }

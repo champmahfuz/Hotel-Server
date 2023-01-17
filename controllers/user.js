@@ -1,13 +1,9 @@
-/* import User from "../models/User.js";
-
+import User from "../models/User.js";
 
 export const updateUser = async (req, res, next) => {
     try {
-        const updateUser = await User.findByIdAndUpdate
-            (req.params.id,
-                { $set: req.body },
-                { new: true })
-        res.status(200).json(updateUser);
+        const updatedUser = await User.findByIdAndUpdate(req.params.id, { $set: req.body }, { new: true })
+        res.status(200).json(updatedUser);
     } catch (err) {
         next(err);
     }
@@ -30,6 +26,7 @@ export const getUser = async (req, res, next) => {
         next(err);
     }
 }
+
 export const getUsers = async (req, res, next) => {
     try {
         const users = await User.find();
@@ -38,4 +35,3 @@ export const getUsers = async (req, res, next) => {
         next(err);
     }
 }
- */
